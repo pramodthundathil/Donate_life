@@ -1,0 +1,106 @@
+body{
+    background-color:lavender;
+    font-family:'Times New Roman', Times, serif;
+}
+.head-brand{
+    margin: auto;
+}
+.navbar-nav{
+    margin: auto;
+}
+.color-nav{
+    font-size: x-large;
+    background-color: #ed5c23 ;
+    color: aliceblue;
+    box-shadow: #5077A7 0px 8px 24px;
+}
+.nav-item a:hover{
+    color: white;
+}
+.nav-item{
+    padding-left: 30px;
+}
+.head-brand{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color:#5077A7 ;
+}
+.base-image{
+    margin-top:1%;
+    margin-bottom: 5%;
+}
+@media (max-width:600px) {
+    .base-image img{
+        width: 80%;
+        height: 80%;
+    }
+}
+.login-area{
+    /* border:1px solid #5077A7; */
+    padding: 10px;
+    width: 80%;
+    height:50%;
+    box-shadow: #5077A7 0px 48px 100px 0px;
+    border-radius: 10px;
+    background-color: #ed5c23;
+    color: #5077A7;
+}
+.login-area button{
+    color: #5077A7;
+    background-color: #7DDCCA;
+}
+.login-area button:focus{
+    background-color: #ed5c23;
+}
+.login-screen{
+    text-align: center;
+    color:#5077A7 ;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.login-screen input{
+    width: 80%;
+    padding: 3%;
+    border-radius: 5px;
+    border: 0.5px solid #5077A7;
+}
+.login-screen button{
+    border: .5px solid #5077A7;
+    padding: 10px 40px 10px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #5077A7;
+    border-radius: 10px;
+}
+.login-screen button:hover{
+    background-color: #fff;
+    color: #5077A7;
+
+}
+.donation-card{
+    background-color: #ed5c23;
+    box-shadow: #5077A7 0px 48px 100px 0px;
+}
+.donate-button button{
+    border: .5px solid #5077A7;
+    padding: 10px 40px 10px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #5077A7;
+    border-radius: 10px;
+}
+.donate-button button:hover{
+    background-color: #fff;
+    color: #5077A7;
+}
+footer button{
+    border: .5px solid #5077A7;
+    padding: 10px 40px 10px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #5077A7;
+    border-radius: 10px;
+}

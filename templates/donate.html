@@ -1,0 +1,63 @@
+{% extends "home.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg base-image img-base">
+            <img src="{%static 'images/donate2.png' %}" width="500px" height="500px" alt="">
+        </div>
+<div class="col-lg base-image">
+    <div class="card mb-3 donation-card" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{% static 'images/donate_card.png' %}" class="img-fluid rounded-start" alt="..."
+                    height="200px"><br>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Doante The Part</h5>
+                    <p class="card-text">“When we give cheerfully and accept gratefully, everyone is blessed.”</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="donate-button">
+                        <button>Donate Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 donation-card" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="/static/images/donate-card2.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Donate Cloths</h5>
+                    <p class="card-text"> “It's not how much we give but how much love we put into giving.”</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="donate-button">
+                        <button>Donate Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 donation-card" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="/static/images/donate-card3.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Donate Food</h5>
+                    <p class="card-text"> “A man there was, and they called him mad; the more he gave, the more he had.”</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="donate-button">
+                        <button>Donate Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

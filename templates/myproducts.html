@@ -1,0 +1,40 @@
+{% extends "home.html" %}
+{% block content %}
+
+<div class="container">
+    <h2>Requested Products</h2>
+    <table class="table table-info text-center mt-5">
+        <tr>
+            <th>Product</th>
+            <th>Stock</th>
+            <th>Date</th>
+            <th>Shop Name</th>
+            <th>Brand</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        {% for item in product %}
+        <tr>
+            <td>{{item.Product_Name}}</td>
+            <td>{{item.Stock}}</td>
+            <td>{{item.Date}}</td>
+            <td>{{item.Shop_Name}}</td>
+            <td>{{item.Brand}}</td>
+            
+            {% if item.status == False %}
+            <td class="text-warning">Not Donated</td>
+            {% else %}
+            <td class="text-success">Donated</td>
+        
+            {% endif %}
+                
+            <td><a href="{%url 'DeleteProduct' item.id %}" class="btn btn-outline-danger">Delete</a></td>
+        </tr>
+      
+
+        {% endfor %}
+
+    </table>
+</div>
+  
+{% endblock %}

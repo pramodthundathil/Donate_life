@@ -1,0 +1,25 @@
+
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<style>
+    .btn{
+        font-size: 30px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg base-image img-base">
+            <img src="{%static 'images/donate2.png' %}" width="500px" height="500px" alt="">
+        </div>
+        <div class="col-lg text-center">
+<h2 class="mt-5">Confirm Who You Are</h2>
+<br><br>
+<h1><a class="btn btn-outline-info" href="{%url 'DonnerConfirm' %}">I AM A DONNER</a></h1> <br><br>
+<a class="btn btn-outline-dark" href="{%url 'OrgRegister' %}">Register For Charity Organisation</a>
+        </div>
+    </div>
+</div>
+    
+{% endblock  %}
+    

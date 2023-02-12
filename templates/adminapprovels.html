@@ -1,0 +1,23 @@
+{% extends "adminhome.html" %}
+{% block content %}
+
+<div class="container">
+    <table class="table table-info text-center mt-5">
+        <tr>
+            <th>Organisation Name</th>
+            <th>Organisation Type</th>
+            <th>Status</th>
+        </tr>
+        {% for item in approvels  %}
+        <tr>
+            <td>{{item.Organasation_Name}}</td>
+            <td>{{item.Organasation_Type}}</td>
+            <td><a href="{%url 'OrganisationView' item.id %}" class="btn btn-outline-dark">View</a></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+
+    
+{% endblock %}

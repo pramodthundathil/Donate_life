@@ -1,0 +1,36 @@
+{% extends "organasationhome.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2 style="text-align: center;">Approved Products</h2>
+    <table class="table table-info text-center mt-5">
+        <tr>
+            <th>Requested Product</th>
+            <th>Stock</th>
+            <th>Date</th>
+            <th>Doner</th>
+            <th>Status</th>
+            <!-- <th>Action</th> -->
+        </tr>
+        {% for item in req  %}
+        <tr>
+            <td>{{item.product.Product_Name}}</td>
+            <td>{{item.product.Stock}}</td>
+            <td>{{item.Date}}</td>
+            <td>{{item.product.Shop_Name}}</td>
+            
+            {% if item.status == False %}
+            <td class="text-warning">Approvel Pending</td>
+            {% else %}
+            <td class="text-success">Approved</td>
+        
+            {% endif %}
+                
+            <!-- <td><a href="{%url 'OrganisationView' item.id %}" class="btn btn-outline-danger">View</a></td> -->
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+
+  
+{% endblock  %}

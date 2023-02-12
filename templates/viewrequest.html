@@ -1,0 +1,128 @@
+{% extends "home.html" %}
+{% block content %}
+<style>
+   .temcontainer{
+    width:90%;
+    height:500px;
+    margin: auto;
+    border: .5px solid gray;
+    padding: 20px;
+    border-radius: 10px;
+   } 
+   .temcontainer h4{
+    text-align: center;
+    background-color: black;
+    color: white;
+   }
+</style>
+  <div class="comntainer mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="temcontainer">
+<h4>Product Details</h4>
+{% for item in req  %}
+<table class="table">
+    <tr>
+        <td>Product Name</td>
+        <th>: {{item.product.Product_Name}}</th>
+    </tr>
+    <tr>
+        <td>Product Brand</td>
+        <th>: {{item.product.Brand}}</th>
+    </tr>
+    <tr>
+        <td>Product Stock</td>
+        <th>: {{item.product.Stock}}</th>
+    </tr>
+    <tr>
+        <td>Product Category</td>
+        <th>: {{item.product.Category}}</th>
+    </tr>
+    <tr>
+        <td>Product Price</td>
+        <th>: {{item.product.Price}}</th>
+    </tr>
+    <tr>
+        <td>Shop Name</td>
+        <th>: {{item.product.Shop_Name}}</th>
+    </tr>
+    <tr>
+        <td>Discription</td>
+        <td>: {{item.product.Discription}}</td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        
+        {% if item.status == Flase %}
+        <td class="text-info">Not Donated</td>
+        {% else %}
+        <td class="text-success">Donated</td>
+            
+        {% endif %}
+            
+    </tr>
+</table>
+  
+
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="temcontainer">
+<h4>Organisation Details</h4>
+{% for i in org  %}
+<table class="table">
+    <tr>
+        <td>Organasation Name</td>
+        <th>{{i.Organasation_Name}}</th>
+    </tr>
+    <tr>
+        <td>Orginisation Type</td>
+        <th>{{i.Organasation_Type}}</th>
+    </tr>
+    <tr>
+        <td>Phone Number</td>
+        <th>{{i.Phone_Number}}</th>
+    </tr>
+    <tr>
+        <td>Place</td>
+        <th>{{i.Place}}</th>
+    </tr>
+    <tr>
+        <td>Contry</td>
+        <th>{{i.Contry}}</th>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <th>{{i.Address}}</th>
+    </tr>
+    <tr>
+        <td>Registration Number</td>
+        <th>{{i.Registration_Number}}</th>
+    </tr>
+    <tr>
+        <td>Number of members</td>
+        <th>{{i.Number_of_members}}</th>
+    </tr>
+
+</table>
+  
+{% endfor %}
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="temcontainer">
+                <h4>My Actions</h4>
+
+                <br><br><br>
+                <a href="{%url 'ApproveRequest' item.id %}" class="btn btn-outline-success">Approve Request</a><br><br>
+                <a href="" class="btn btn-outline-danger">Delete Request</a>
+            </div>
+
+        </div>
+{% endfor %}
+
+    </div>
+  </div>
+{% endblock %}
